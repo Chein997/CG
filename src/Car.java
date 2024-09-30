@@ -42,12 +42,12 @@ public class Car {
         Graphics2D g = (Graphics2D) gr;
 
         int carX = (int) (this.x + (this.width * 0.2));
-        int carY = (int) ((double) this.height * 0.67);
+        int carY = (int) (this.y - this.height * 0.07);
 
         //колеса
         //rear
         int wheelX = carX - (int) (this.width * 0.12);
-        int wheelY = (int) ((double) this.height * 0.9);
+        int wheelY = carY + (int) (this.height * 0.215);
         g.setColor(Color.BLACK);
         g.rotate(wheelAng, wheelX + this.width / 20, wheelY + this.width / 20);
         g.drawOval(wheelX, wheelY, this.width / 10, this.width / 10);
